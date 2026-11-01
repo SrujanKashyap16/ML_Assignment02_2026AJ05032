@@ -134,7 +134,7 @@ preprocessing artifact can drift out of sync.
 
 <https://github.com/SrujanKashyap16/ML_Assignment02_2026AJ05032>
 
-**Live Streamlit app:** `<PASTE YOUR STREAMLIT APP URL HERE>`
+**Live Streamlit app:** <https://ml-assignment-02-2026aj05032-d69cklzmzkbevcqqwdc5gc.streamlit.app>
 
 ### Repository layout
 
@@ -241,7 +241,7 @@ not against zero.
 
 ## e. Streamlit application
 
-**Live app:** `<PASTE YOUR STREAMLIT APP URL HERE>`
+**Live app:** <https://ml-assignment-02-2026aj05032-d69cklzmzkbevcqqwdc5gc.streamlit.app>
 
 The app loads the five `.joblib` pipelines from `model/` and scores them against the test
 CSV. **No model is retrained in the browser** — `train_models.py` is the only thing that
