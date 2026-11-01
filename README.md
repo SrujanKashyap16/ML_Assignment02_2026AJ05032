@@ -141,8 +141,11 @@ preprocessing artifact can drift out of sync.
 ```
 ML_Assignment02_2026AJ05032/
 ├── app.py                  Streamlit application (loads saved models, never retrains)
+├── theme.py                Design tokens + Matplotlib styling shared by every figure
 ├── train_models.py         Source code: trains + persists all five pipelines
 ├── requirements.txt        Deployment dependencies
+├── .streamlit/
+│   └── config.toml         Pinned light theme, so charts and page share one surface
 ├── README.md               This file
 ├── test_data.csv           2,400-row hold-out split (15 features + target)
 ├── model/
@@ -286,9 +289,9 @@ failure:
 - `requirements.txt` pins **`scikit-learn>=1.9`**. The pipelines were pickled with 1.9.1,
   and joblib artifacts are not guaranteed to load across major scikit-learn versions — an
   older resolved version is the likeliest cause of a deployment-time load error.
-- **`seaborn` is listed** even though it is only used for the heatmap and bar chart. It is
-  not a scikit-learn or Streamlit transitive dependency and will not be installed
-  implicitly.
+- **Every chart is plain Matplotlib**, with no seaborn dependency. Fonts are pinned to
+  DejaVu Sans, which ships inside Matplotlib, so the figures render identically on the
+  deployment host without relying on any system font being installed.
 
 Total repository size is ~11 MB, well inside the free tier.
 
@@ -296,7 +299,7 @@ Total repository size is ~11 MB, well inside the free tier.
 
 ## Tech stack
 
-Python 3.13 · scikit-learn · pandas · NumPy · Streamlit · Matplotlib · seaborn · joblib
+Python 3.13 · scikit-learn · pandas · NumPy · Streamlit · Matplotlib · joblib
 
 ## Dataset citation
 

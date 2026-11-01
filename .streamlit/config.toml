@@ -1,0 +1,14 @@
+# Explicit theme so the deployed app renders identically for every viewer,
+# and so the Matplotlib figures sit on the same surface as the page.
+[theme]
+base = "light"
+primaryColor = "#2a78d6"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f7f7f5"
+textColor = "#0b0b0b"
+
+[client]
+toolbarMode = "minimal"
+
+[browser]
+gatherUsageStats = false
