@@ -132,16 +132,14 @@ preprocessing artifact can drift out of sync.
 
 ## c. GitHub repository link
 
-> **`<PASTE YOUR REPOSITORY URL HERE>`**
->
-> *(e.g. `https://github.com/<your-username>/ML-Assignment02`)*
+<https://github.com/SrujanKashyap16/ML_Assignment02_2026AJ05032>
 
 **Live Streamlit app:** `<PASTE YOUR STREAMLIT APP URL HERE>`
 
 ### Repository layout
 
 ```
-ML-Assignment02/
+ML_Assignment02_2026AJ05032/
 ├── app.py                  Streamlit application (loads saved models, never retrains)
 ├── train_models.py         Source code: trains + persists all five pipelines
 ├── requirements.txt        Deployment dependencies
@@ -168,6 +166,9 @@ one object — so there are no loose preprocessing artifacts to lose.
 ### Reproducing the results
 
 ```bash
+git clone https://github.com/SrujanKashyap16/ML_Assignment02_2026AJ05032.git
+cd ML_Assignment02_2026AJ05032
+
 python -m venv .venv
 .venv\Scripts\activate          # Windows;  source .venv/bin/activate  on Linux/macOS
 pip install -r requirements.txt
